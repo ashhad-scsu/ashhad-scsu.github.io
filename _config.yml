@@ -6,8 +6,8 @@ repository_name: "{{ site.github.repository_name }}"
 # Site settings
 title: "{{ site.github.owner_name }}'s Personal Website"
 description: "A personal website for {{ site.github.owner_name }}"
-url: "https://{{ site.github.owner_name }}.github.io"
-baseurl: ""
+url: "https://{{ owner_name }}.github.io"
+baseurl: "/{{ repository_name }}"
 
 # Build settings
 markdown: kramdown
@@ -18,8 +18,8 @@ plugins:
 
 # GitHub Pages settings
 github:
-  username: "{{ site.github.owner_name }}"
-  repository: "{{ site.github.repository_name }}"
+  username: "{{ owner_name }}"
+  repository: "{{ repository_name }}"
 
 # Exclude files from build
 exclude:
