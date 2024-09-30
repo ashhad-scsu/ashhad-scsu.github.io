@@ -1,1 +1,0 @@
-# ashhad-scsu.github.io

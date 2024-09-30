@@ -1,0 +1,28 @@
+---
+# Variables
+owner_name: "{{ site.github.owner_name }}"
+repository_name: "{{ site.github.repository_name }}"
+
+# Site settings
+title: "{{ site.github.owner_name }}'s Personal Website"
+description: "A personal website for {{ site.github.owner_name }}"
+url: "https://{{ site.github.owner_name }}.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# GitHub Pages settings
+github:
+  username: "{{ site.github.owner_name }}"
+  repository: "{{ site.github.repository_name }}"
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
