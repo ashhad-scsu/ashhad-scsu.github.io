@@ -1,13 +1,13 @@
 ---
-# Variables
-owner_name: "{{site.github.owner_name}}"
-repository_name: "{{site.github.repository_name}}"
+# # Variables
+# owner_name: "{{site.github.owner_name}}"
+# repository_name: "{{site.github.repository_name}}"
 
 # Site settings
-title: "{{site.github.owner_name}}'s Personal Website"
-description: "A personal website for {{site.github.owner_name}}"
-url: "https://{{owner_name}}.github.io"
-baseurl: "/{{repository_name}}"
+title: "${{env.GITHUB_REPOSITORY_OWNER}}'s Personal Website"
+description: "A personal website for ${{env.GITHUB_REPOSITORY_OWNER}}"
+url: "https://${{env.GITHUB_REPOSITORY_OWNER}}.github.io"
+baseurl: "/${{env.GITHUB_REPOSITORY}}"
 
 # Build settings
 markdown: kramdown
@@ -18,8 +18,8 @@ plugins:
 
 # GitHub Pages settings
 github:
-  username: "{{owner_name}}"
-  repository: "{{repository_name}}"
+  username: "${{env.GITHUB_REPOSITORY_OWNER}}"
+  repository: "${{env.GITHUB_REPOSITORY}}"
 
 # Exclude files from build
 exclude:
